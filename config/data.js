@@ -1,9 +1,142 @@
 // primeiro vem a chave, dps vem o valor
-const magia = { nome: 'kappa', descricao: 'uhu', componentes: 'material', verbal: true, somatico: true, duracao: 'instant', conjuradores: ['feiticeiro', 'mago'], escola: 'transmutação', nivel: 2, alcance: { unidade: 'm', valor: '91' }, tempoConj: { unidade: 'ação', valor: 1, requisitos: '' }, testeResist: 'força',ritual:true,concentracao:true,funcao:'dano' }
-/**
- * @param {string} kappa
- *  *//
-function createMagia(/*String */nome,descricao,componentes,verbal,somatico,duracao,conjuradores,escola,nivel,alcance,tempoConj,testeResist,ritual,concentracao,funcao) {
-    return {nome,descricao,componentes,verbal,somatico,duracao,conjuradores,escola,nivel,alcance,tempoConj,testeResist,ritual,concentracao,funcao}
+/* const magia = { nome: 'kappa', descricao: 'uhu', componentes: 'material', verbal: true, somatico: true, duracao: 'instant', conjuradores: ['feiticeiro', 'mago'], escola: 'transmutação', nivel: 2, alcance: { unidade: 'm', valor: '91' }, tempoConj: { unidade: 'ação', valor: 1, requisitos: '' }, testeResist: 'força',ritual:true,concentracao:true,funcao:'dano' } */
+
+export function createMagia(
+  /*String */ nome,
+  descricao,
+  componentes,
+  verbal,
+  somatico,
+  duracao,
+  conjuradores,
+  escola,
+  nivel,
+  alcance,
+  tempoConj,
+  testeResist,
+  ritual,
+  concentracao,
+  funcao
+) {
+  return {
+    nome,
+    descricao,
+    componentes,
+    verbal,
+    somatico,
+    duracao,
+    conjuradores,
+    escola,
+    nivel,
+    alcance,
+    tempoConj,
+    testeResist,
+    ritual,
+    concentracao,
+    funcao
+  };
 }
-export const magias=[createMagia('Abraço Terrestre De Maximilian','Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.','uma mão em miniatura esculpida em barro',true,true,'1 minuto',['feiticeiro,mago'],'Transmutação',2,{unidade:'m',valor:'9'},{unidade:'ação',valor:1,requisitos:''},'força',true,true,'dano'),createMagia()]
+export const magias = [
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  ),
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  ),
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  ),
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  ),
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  ),
+  createMagia(
+    "Abraço Terrestre De Maximilian",
+    "Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.\nCom uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.\nPara se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.\nCom uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.",
+    "uma mão em miniatura esculpida em barro",
+    true,
+    true,
+    "1 minuto",
+    ["feiticeiro,mago"],
+    "Transmutação",
+    2,
+    { unidade: "m", valor: "9" },
+    { unidade: "ação", valor: 1, requisitos: "" },
+    "força",
+    true,
+    true,
+    "dano"
+  )
+];
