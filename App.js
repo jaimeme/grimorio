@@ -14,18 +14,18 @@ export default class App extends Component {
   }
   onMakeStore = (message, store) => {
     console.log("Message", message, "new State", store);
-    //this.setState({ isLoading: false });
+    this.setState({ isLoading: false });
   };
   componentWillMount() {
     const store = makeStore(this.onMakeStore);
-    this.setState({ store: store });
+    this.setState({ store });
   }
   render() {
     if (this.state.isLoading) {
       return <SplashScreen />;
     }
     return (
-      <Provider>
+      <Provider store={this.state.store}>
         <Magias />
       </Provider>
     );
