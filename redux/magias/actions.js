@@ -1,4 +1,9 @@
-import { SET_MAGIAS, SET_TIMESTAMP, SET_IS_FETCHING_MAGIAS } from "./types";
+import {
+  SET_MAGIAS,
+  SET_TIMESTAMP,
+  SET_IS_FETCHING_MAGIAS,
+  SET_HAS_FETCHED_MAGIAS
+} from "./types";
 
 export const setMagias = magias => ({
   type: SET_MAGIAS,
@@ -12,5 +17,10 @@ export const setTimeStamp = timestamp => ({
 
 export const setIsFetchingMagias = boolean => ({
   type: SET_IS_FETCHING_MAGIAS,
+  payload: boolean
+});
+
+export const setHasFetchedMagias = boolean => ({
+  type: SET_HAS_FETCHED_MAGIAS,
   payload: boolean
 });
