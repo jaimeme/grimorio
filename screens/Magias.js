@@ -3,6 +3,7 @@ import { View, Text, FlatList } from "react-native";
 import { magias, createMagia } from "../config/data";
 import MagiaItem from "../components/MagiaItem";
 import { colors } from "../config/styles";
+import Header from "../components/Header";
 
 export default class Magias extends PureComponent {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class Magias extends PureComponent {
     return (
       <View style={{ flex: 1, backgroundColor: colors.textIcons }}>
         <FlatList
+          ListHeaderComponent={() => <Header />}
           ListFooterComponent={() => (
             <View
               style={{
