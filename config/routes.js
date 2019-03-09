@@ -8,6 +8,7 @@ import { Icon } from "react-native-elements";
 import React from "react";
 import Config from "../screens/Config";
 import Grimorio from "../screens/Grimorio";
+import { colors } from "./styles";
 const MagiasStack = createStackNavigator({
   Magias: {
     screen: Magias,
@@ -38,11 +39,11 @@ const Tabs = createBottomTabNavigator(
     Magias: {
       screen: MagiasStack
     },
-    Config: {
-      screen: ConfigStack
-    },
     Grimorio: {
       screen: GrimorioStack
+    },
+    Config: {
+      screen: ConfigStack
     }
   },
   {
@@ -52,11 +53,11 @@ const Tabs = createBottomTabNavigator(
         let iconType;
         let iconName;
         if (routeName === "Magias") {
-          iconName = "wunderlist";
+          iconName = "book-open-page-variant";
           iconType = "material-community";
         } else if (routeName === "Config") {
-          iconName = "wunderlist";
-          iconType = "material-community";
+          iconName = "gear";
+          iconType = "evilicon";
         } else if (routeName === "Grimorio") {
           iconName = "wunderlist";
           iconType = "material-community";
@@ -69,8 +70,13 @@ const Tabs = createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "tomato",
-      inactiveTintColor: "gray"
+      activeTintColor: colors.textIcons,
+      inactiveTintColor: colors.secondaryText,
+      activeBackgroundColor: colors.primaryColor,
+      inactiveBackgroundColor: colors.primaryColor,
+      labelStyle: {
+        fontSize: 15
+      }
     }
   }
 );
