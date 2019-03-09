@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import Magias from "./screens/Magias";
 import makeStore from "./redux/createStore";
 import SplashScreen from "./components/SplashScreen";
+import AppStack from "./config/routes";
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +26,7 @@ export default class App extends Component {
     }
     return (
       <Provider store={this.state.store}>
-        <Magias />
+        <AppStack />
       </Provider>
     );
   }
