@@ -16,9 +16,7 @@ export default class SplashScreen extends PureComponent {
           justifyContent: "center",
           alignItems: "center"
         }}
-      >
-        <Text style={{ color: "brown" }}> SplashScreen </Text>
-      </View>
+      />
     );
   }
 }
